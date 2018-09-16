@@ -6,5 +6,5 @@ RUN wget http://mirrors.wuchna.com/apachemirror/tomcat/tomcat-9/v9.0.12/bin/apac
 RUN cd /tmp && tar xvfz tomcat.tar.gz
 RUN cp -Rv /tmp/apache-tomcat-9.0.12/* /usr/local/tomcat/
 ADD ./target/*.war /usr/local/tomcat/webapps/ 
-EXPOSE 8082
+EXPOSE 8080
 CMD /usr/local/tomcat/bin/catalina.sh run
