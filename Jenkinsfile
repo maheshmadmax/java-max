@@ -1,7 +1,7 @@
 node("docker") {
-    docker.withRegistry('https://hub.docker.com/r/maheshmadmax/', 'maheshmadmax') {
+    docker.withRegistry('https://hub.docker.com/r/maheshmadmax/', 'dockerhub') {
     
-        git url: "https://github.com/maheshmadmax/java-max.git", credentialsId: 'maheshmadmax'
+        git url: "https://github.com/maheshmadmax/java-max.git", credentialsId: 'github'
     
         sh "git rev-parse HEAD > .git/commit-id"
         def commit_id = readFile('.git/commit-id').trim()
