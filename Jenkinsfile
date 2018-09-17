@@ -1,5 +1,5 @@
 node("docker") {
-    docker.withRegistry('https://hub.docker.com/r/maheshmadmax/hello-java/', 'maheshmadmax') {
+    docker.withRegistry('https://hub.docker.com/r/maheshmadmax/', 'maheshmadmax') {
     
         git url: "https://github.com/maheshmadmax/java-max.git", credentialsId: 'maheshmadmax'
     
