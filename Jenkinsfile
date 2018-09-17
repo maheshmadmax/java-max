@@ -1,4 +1,4 @@
-node("docker") {
+node('docker') {
     docker.withDockerRegistry(credentialsId: 'dockerhub', url: 'https://hub.docker.com/') {
     
         git changelog: false, credentialsId: 'dockerhub', poll: false, url: 'https://github.com/maheshmadmax/java-max.git'
