@@ -1,5 +1,5 @@
 node {
-    withDockerRegistry(credentialsId: 'dockerhub', url: 'https://hub.docker.com') {
+    withDockerRegistry(credentialsId: 'dockerhub') {
     
         git url: "https://github.com/maheshmadmax/java-max.git", credentialsId: 'github'
     
